@@ -1,4 +1,4 @@
-# put your code here.
+import sys
 
 def word_count(filename):
 
@@ -12,7 +12,7 @@ def word_count(filename):
 
 
         for word in words:
-            word = word.strip(',.!?-#&()%@*')
+            word = word.strip(",.!?-#&()%@*/:$;.""")
             word = word.lower()
 
             if word in word_count:
@@ -25,4 +25,7 @@ def word_count(filename):
     
     return word_count
 
-word_count("test.txt")
+# get filename from the command line
+file = sys.argv[1]
+
+word_count(file)
