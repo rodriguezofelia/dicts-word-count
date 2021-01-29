@@ -12,6 +12,9 @@ def word_count(filename):
 
 
         for word in words:
+            word = word.strip(',.!?-#&()%@*')
+            word = word.lower()
+
             if word in word_count:
                 word_count[word] += 1
             else: 
