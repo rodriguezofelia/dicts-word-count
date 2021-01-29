@@ -17,6 +17,9 @@ def word_count(filename):
             else: 
                 word_count[word] = 1
 
+        for key, value in word_count.items():
+            print(key, value)
+    
     return word_count
 
 word_count("test.txt")
